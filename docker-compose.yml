@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  ml-bot-service:
+    build:
+      context: ./ml-bot
+      dockerfile: Dockerfile
+    container_name: ml-bot-service
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+    networks:
+      - ml-bot-network
+
+#volumes:
+#  postgres-data:
+
+networks:
+  ml-bot-network:
+    name: ml-bot-network
+    driver: bridge
