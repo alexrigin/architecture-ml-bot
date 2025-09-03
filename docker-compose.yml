@@ -10,6 +10,7 @@ services:
       - "8080:8080"
     environment:
       PORT: 8080
+      DEEPSEEK_API_KEY: sk-57c34dd3d00f475383ae6248c13bb65e
     networks:
       - ml-bot-network
 
