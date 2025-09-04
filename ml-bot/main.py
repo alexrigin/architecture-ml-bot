@@ -15,7 +15,7 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_core.runnables import RunnableLambda
 
 IS_CENSOR_TURNED_ON = False
-DEEPSEEK_API_KEY = "sk-57c34dd3d00f475383ae6248c13bb65e"
+DEEPSEEK_API_KEY = "sk-d24e634026434d56b5612529c82a8986"
 
 injection_patterns = [
     "ignore previous instructions", "ignore previou", "ignore all", "disregard", "disregard the above",
@@ -27,8 +27,6 @@ injection_patterns = [
     "password", "secret", "key", "token"
 ]
 
-if not os.getenv("DEEPSEEK_API_KEY"):
-    os.environ["DEEPSEEK_API_KEY"] = "sk-57c34dd3d00f475383ae6248c13bb65e"
 
 class SecureRetriever(BaseRetriever):
     vector_store: any

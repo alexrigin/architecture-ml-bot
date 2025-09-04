@@ -7,15 +7,15 @@ services:
       dockerfile: Dockerfile
     container_name: ml-bot-service
     ports:
-      - "8080:8080"
+      - "8000:8000"
     environment:
-      PORT: 8080
-      DEEPSEEK_API_KEY: sk-57c34dd3d00f475383ae6248c13bb65e
+      PORT: 8000
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
     networks:
       - ml-bot-network
 
-#volumes:
-#  postgres-data:
+volumes:
+ ml-bot-data:
 
 networks:
   ml-bot-network:
