@@ -15,7 +15,6 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_core.runnables import RunnableLambda
 
 IS_CENSOR_TURNED_ON = False
-DEEPSEEK_API_KEY = "sk-d24e634026434d56b5612529c82a8986"
 
 injection_patterns = [
     "ignore previous instructions", "ignore previou", "ignore all", "disregard", "disregard the above",
