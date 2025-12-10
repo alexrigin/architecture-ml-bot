@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ml-bot-service:
+    build:
+      context: ./ml-bot
+      dockerfile: Dockerfile
+    container_name: ml-bot-service
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+    networks:
+      - ml-bot-network
+
+volumes:
+ ml-bot-data:
+
+networks:
+  ml-bot-network:
+    name: ml-bot-network
+    driver: bridge

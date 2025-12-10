@@ -262,3 +262,7 @@ sketch
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,jetbrains+all,node,react
+
+
+__pycache__/*
+chroma_langchain_db/*
